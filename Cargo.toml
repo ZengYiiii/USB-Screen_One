@@ -1,0 +1,20 @@
+[package]
+name = "USB-Screen_One"
+version = "1.1.6"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+image = "0.25.1"
+log = "0.4.21"
+env_logger = "0.11.3"
+usb = "0.5.0"
+lz4_flex = "0.11.3"
+
+[features]
+default = ["usb-serial"]
+usb-serial = ["serialport"]
+
+[dependencies.serialport]
+version = "4.4.0"
+optional = true
